@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  AliyunVideoClient_Entrance
+
+  Created by 郦立 on 2019/6/25.
+  Copyright © 2019 Alibaba. All rights reserved.
+*/
+
+
+CFBundleDisplayName = "阿里云视频云";
