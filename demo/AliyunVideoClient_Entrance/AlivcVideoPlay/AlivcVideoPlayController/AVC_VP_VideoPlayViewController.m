@@ -26,7 +26,6 @@
 #import "AlivcAlertView.h"
 #import "MBProgressHUD+AlivcHelper.h"
 
-
 NS_ASSUME_NONNULL_BEGIN
 
 #define VIEWSAFEAREAINSETS(view) ({UIEdgeInsets i; if(@available(iOS 11.0, *)) {i = view.safeAreaInsets;} else {i = UIEdgeInsetsZero;} i;})
@@ -88,6 +87,16 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
  离线视频
  */
 @property (nonatomic, strong) UIButton *offLineVideoButton;
+
+/**
+ 聊天室
+ */
+@property (nonatomic, strong) UIButton *chatroomButton;
+
+/**
+ 聊天室视图
+ */
+@property (nonatomic, strong) UIView *chatroomView;
 
 /**
  离线视频上的小红点
@@ -257,6 +266,7 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
         [_exchangeContainView addSubview:self.listButton];
         [_exchangeContainView addSubview:self.logButton];
         [_exchangeContainView addSubview:self.offLineVideoButton];
+        [_exchangeContainView addSubview:self.chatroomButton];
         [_exchangeContainView addSubview:self.exchangeLineView];
     }
     return _exchangeContainView;
@@ -264,7 +274,7 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
 
 - (UIView *)exchangeLineView{
     if (!_exchangeLineView) {
-        _exchangeLineView = [[UIView alloc]initWithFrame:CGRectMake(0, self.exchangeContainView.frame.size.height - 2, ScreenWidth / 3, 2)];
+        _exchangeLineView = [[UIView alloc]initWithFrame:CGRectMake(0, self.exchangeContainView.frame.size.height - 2, ScreenWidth / 4, 2)];
         _exchangeLineView.backgroundColor = [UIColor colorWithHexString:@"00c1de"];
     }
     return _exchangeLineView;
@@ -275,7 +285,7 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
         _listButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_listButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_listButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
-        [_listButton setFrame:CGRectMake(0, 0, self.exchangeContainView.frame.size.width / 3, self.exchangeContainView.frame.size.height)];
+        [_listButton setFrame:CGRectMake(0, 0, self.exchangeContainView.frame.size.width / 4, self.exchangeContainView.frame.size.height)];
         [_listButton setTitle:[NSLocalizedString(@"视频列表", nil)  localString] forState:UIControlStateNormal];
         [_listButton setTitle:[NSLocalizedString(@"视频列表", nil) localString] forState:UIControlStateSelected];
         [_listButton setTitleEdgeInsets:UIEdgeInsetsMake(10, 0, 0, 0)];
@@ -289,7 +299,7 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
         _logButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_logButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_logButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
-        [_logButton setFrame:CGRectMake(self.exchangeContainView.frame.size.width / 3, 0, self.exchangeContainView.frame.size.width / 3, self.exchangeContainView.frame.size.height)];
+        [_logButton setFrame:CGRectMake(self.exchangeContainView.frame.size.width / 4, 0, self.exchangeContainView.frame.size.width / 4, self.exchangeContainView.frame.size.height)];
         [_logButton setTitle:[NSLocalizedString(@"日志", nil) localString] forState:UIControlStateNormal];
         [_logButton setTitle:[NSLocalizedString(@"日志", nil) localString] forState:UIControlStateSelected];
         [_logButton setTitleEdgeInsets:UIEdgeInsetsMake(10, 0, 0, 0)];
@@ -303,7 +313,7 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
         _offLineVideoButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_offLineVideoButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_offLineVideoButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
-        [_offLineVideoButton setFrame:CGRectMake(self.exchangeContainView.frame.size.width*2 / 3, 0, self.exchangeContainView.frame.size.width / 3, self.exchangeContainView.frame.size.height)];
+        [_offLineVideoButton setFrame:CGRectMake(self.exchangeContainView.frame.size.width / 2, 0, self.exchangeContainView.frame.size.width / 4, self.exchangeContainView.frame.size.height)];
         [_offLineVideoButton setTitle:[NSLocalizedString(@"离线视频", nil) localString] forState:UIControlStateNormal];
         [_offLineVideoButton setTitle:[NSLocalizedString(@"离线视频", nil)  localString] forState:UIControlStateSelected];
         [_offLineVideoButton setTitleEdgeInsets:UIEdgeInsetsMake(10, 0, 0, 0)];
@@ -317,6 +327,32 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
         [_offLineVideoButton addSubview:self.redView];
     }
     return _offLineVideoButton;
+}
+
+- (UIButton *)chatroomButton{
+    if(!_chatroomButton){
+        _chatroomButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_chatroomButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_chatroomButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+        [_chatroomButton setFrame:CGRectMake(self.exchangeContainView.frame.size.width / 4 * 3, 0, self.exchangeContainView.frame.size.width / 4, self.exchangeContainView.frame.size.height)];
+        [_chatroomButton setTitle:[NSLocalizedString(@"聊天室", nil) localString] forState:UIControlStateNormal];
+        [_chatroomButton setTitle:[NSLocalizedString(@"聊天室", nil) localString] forState:UIControlStateSelected];
+        [_chatroomButton setTitleEdgeInsets:UIEdgeInsetsMake(10, 0, 0, 0)];
+        [_chatroomButton addTarget:self action:@selector(chatroomButtonTouched) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _chatroomButton;
+}
+
+- (UIView *)chatroomView{
+    if(!_chatroomView){
+        CGFloat increat = 0;
+        if(IPHONEX){
+            increat = 16;
+        }
+        CGFloat y = self.playerView.frame.size.height + 20 + self.exchangeContainView.frame.size.height + increat;
+        _chatroomView = [[UIView alloc]initWithFrame:CGRectMake(0, y, ScreenWidth, ScreenHeight - y)];
+    }
+    return _chatroomView;
 }
 
 - (AlivcPlayListsView *)listView{
@@ -713,6 +749,9 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
             case 2:
                 [self offLineVideoButtonTouched];
                 break;
+            case 3:
+                [self chatroomButtonTouched];
+                break;
             default:
                 break;
         }
@@ -836,8 +875,9 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
     
     self.downloadContainView.hidden = true;
     self.logView.hidden = YES;
+    self.chatroomView.hidden = YES;
     
-    CGFloat cx = self.exchangeContainView.frame.size.width * 1 / 6;
+    CGFloat cx = self.exchangeContainView.frame.size.width * 1 / 8;
     CGFloat cy = self.exchangeLineView.center.y;
     [UIView animateWithDuration:0.5 animations:^{
         self.exchangeLineView.center = CGPointMake(cx, cy);
@@ -850,8 +890,8 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
     
     self.listView.hidden = YES;
     self.downloadContainView.hidden = true;
-    
-    CGFloat cx = self.exchangeContainView.frame.size.width *1  /2;
+    self.chatroomView.hidden = YES;
+    CGFloat cx = self.exchangeContainView.frame.size.width *3  /8;
     CGFloat cy = self.exchangeLineView.center.y;
     [UIView animateWithDuration:0.5 animations:^{
         self.exchangeLineView.center = CGPointMake(cx, cy);
@@ -866,13 +906,27 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
         
         self.listView.hidden = YES;
         self.downloadContainView.hidden = false;
-        
-        CGFloat cx = self.exchangeContainView.frame.size.width * 5 / 6;
+        self.chatroomView.hidden = YES;
+        CGFloat cx = self.exchangeContainView.frame.size.width * 5 / 8;
         CGFloat cy = self.exchangeLineView.center.y;
         [UIView animateWithDuration:0.5 animations:^{
             self.exchangeLineView.center = CGPointMake(cx, cy);
         }];
     }
+}
+
+- (void)chatroomButtonTouched{
+    self.chatroomView.hidden = NO;
+    self.logOrDownload = 3;e
+    self.logView.hidden = YES;
+    self.listView.hidden = YES;
+    self.downloadContainView.hidden = true;
+    
+    CGFloat cx = self.exchangeContainView.frame.size.width *7  /8;
+    CGFloat cy = self.exchangeLineView.center.y;
+    [UIView animateWithDuration:0.5 animations:^{
+        self.exchangeLineView.center = CGPointMake(cx, cy);
+    }];
 }
 
 - (void)changePresentStatue:(NSNotification *)noti {
