@@ -24,6 +24,7 @@ PODS:
   - LBXScan/UI (2.3):
     - LBXScan/Types (~> 2.2)
   - MBProgressHUD (1.1.0)
+  - RongCloudIM/IMLib (2.10.0)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -38,20 +39,22 @@ DEPENDENCIES:
   - LBXScan/LBXNative (~> 2.3)
   - LBXScan/UI (~> 2.3)
   - MBProgressHUD (~> 1.1.0)
+  - RongCloudIM/IMLib
   - SDWebImage (~> 4.0.0)
   - UMCAnalytics (= 6.0.1)
   - UMCCommon (= 2.0.0)
 
 SPEC REPOS:
-  "podspec@podspec.alibaba-inc.com:alibaba-specs-mirror/":
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
     - JSONModel
     - LBXScan
     - MBProgressHUD
     - SDWebImage
     - UMCAnalytics
+  trunk:
+    - RongCloudIM
     - UMCCommon
-  "podspec@podspec.alibaba-inc.com:alibaba-specs/":
-    - AFNetworking
 
 EXTERNAL SOURCES:
   FMDB:
@@ -64,15 +67,16 @@ CHECKOUT OPTIONS:
     :tag: '2.7'
 
 SPEC CHECKSUMS:
-  AFNetworking: b2d710bedc5bca35f5d658d5aaadfd1ecd24e8d0
+  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
   FMDB: 115114e988a7c92a5191f1334c46c99b0a477700
-  JSONModel: a3b9097543a777e2a4041a0bb1b80252af9ed566
-  LBXScan: 957343ae0aa96f2299b720258f30548db4b54424
-  MBProgressHUD: e4bfee13f0d2b4c3bc6bdcd94769cb3ed2d23a5e
-  SDWebImage: 6b64a5725896e9de8afbf4ed67d8e1ed331fd11c
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  LBXScan: e51449f0832d1fe17da632af0d22adeb3cfa3543
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  RongCloudIM: 2f513fa5079744e52d2a383c3514d0971797afbb
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   UMCAnalytics: c267acd9bb4a87e5f01735c158b63a617908f92e
   UMCCommon: 79b5a614c958db367113eed5740109d9a98e1223
 
-PODFILE CHECKSUM: f33946b286ce20e3992cba6ae958fb28d0ec1e45
+PODFILE CHECKSUM: 1874ece339e1cbbcf1731a66f7466905aed76532
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.8.4

@@ -17,6 +17,8 @@
 #import <UMAnalytics/MobClick.h>
 #import <artpSource/ArtpFactory.h>
 #import <AliyunPlayer/AliyunPlayer.h>
+#import "RCCRLiveHttpManager.h"
+#import "RCCRRongCloudIMManager.h"
 
 @interface AppDelegate ()
 
@@ -64,6 +66,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self checkVersion];
     });
+    [[RCCRRongCloudIMManager sharedRCCRRongCloudIMManager] initRongCloud:RCIMAPPKey];
     return YES;
 }
 

@@ -24,6 +24,10 @@
 #import "UIImage+AlivcHelper.h"
 #import "DownloadManager.h"
 #import "AlivcAlertView.h"
+#import "RCChatRoomView.h"
+#import "RCChatroomWelcome.h"
+#import "RCCRRongCloudIMManager.h"
+
 #import "MBProgressHUD+AlivcHelper.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -36,7 +40,7 @@ static NSInteger alertViewTag_downLoad_continue = 1002; //wifi为4g时下载是�
 static NSInteger alertViewTag_exit_continue = 1003; //是否继续退出
 static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
 
-@interface AVC_VP_VideoPlayViewController ()<AliyunVodPlayerViewDelegate,UITableViewDataSource,UITableViewDelegate,DownloadManagerDelegate,AVCSelectSharpnessViewDelegate,AlivcPlayListsViewDelegate,UIAlertViewDelegate,AVCVideoDownloadTCellDelegate>
+@interface AVC_VP_VideoPlayViewController ()<AliyunVodPlayerViewDelegate,UITableViewDataSource,UITableViewDelegate,DownloadManagerDelegate,AVCSelectSharpnessViewDelegate,AlivcPlayListsViewDelegate,UIAlertViewDelegate,AVCVideoDownloadTCellDelegate, UIGestureRecognizerDelegate>
 
 //播放器
 @property (nonatomic,strong, nullable)AliyunVodPlayerView *playerView;
@@ -97,6 +101,8 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
  聊天室视图
  */
 @property (nonatomic, strong) UIView *chatroomView;
+
+@property (nonatomic, strong) RCChatRoomView * chatListView;
 
 /**
  离线视频上的小红点
@@ -347,10 +353,20 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
     if(!_chatroomView){
         CGFloat increat = 0;
         if(IPHONEX){
+            
             increat = 16;
         }
         CGFloat y = self.playerView.frame.size.height + 20 + self.exchangeContainView.frame.size.height + increat;
         _chatroomView = [[UIView alloc]initWithFrame:CGRectMake(0, y, ScreenWidth, ScreenHeight - y)];
+        _chatListView.backgroundColor = [UIColor redColor];
+        self.chatListView = [[RCChatRoomView alloc] initWithFrame:_chatroomView.bounds model:nil];
+        [_chatroomView addSubview:self.chatListView];
+        UITapGestureRecognizer *resetBottomTapGesture =[[UITapGestureRecognizer alloc]
+                                                        initWithTarget:self
+                                                        action:@selector(resetBottomGesture:)];
+        resetBottomTapGesture.delegate = self;
+        [_chatroomView addGestureRecognizer:resetBottomTapGesture];
+        
     }
     return _chatroomView;
 }
@@ -444,6 +460,7 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
         [weakself startPlayVideo];
     }];
     [self loadLocalVideo];
+    [self joinChatRoom];
 
     /**************************************/
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -610,6 +627,7 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
     [self.view addSubview:self.listView];
     [self.view addSubview:self.logView];
     [self.view addSubview:self.downloadContainView];
+    [self.view addSubview:self.chatroomView];
     self.downloadContainView.hidden = true;
     [self configDownloadEditView:self.isEdit];
 }
@@ -717,6 +735,34 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
 }
 
 #pragma mark - Custom Method
+
+#pragma mark - Chatroom
+- (void)joinChatRoom {
+    [[RCIMClient sharedRCIMClient] joinChatRoom:@"aliroom" messageCount:-1 success:^{
+        RCChatroomWelcome *joinChatroomMessage = [[RCChatroomWelcome alloc]init];
+                [joinChatroomMessage setId:[RCCRRongCloudIMManager sharedRCCRRongCloudIMManager].currentUserInfo.userId];
+                [self.chatListView sendMessage:joinChatroomMessage pushContent:nil success:nil error:nil];
+    } error:^(RCErrorCode status) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.chatListView alertErrorWithTitle:@"提示" message:@"加入聊天室失败" ok:@"知道了"];
+        });
+    }];
+}
+
+/**
+ 拦截加在整个背景view上的点击手势
+ 
+ @param gestureRecognizer UIGestureRecognizer
+ @param touch UITouch
+ @return BOOL
+ */
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+    if ([touch.view isDescendantOfView:self.chatListView.bottomBtnContentView] || [touch.view isDescendantOfView:self.chatListView.giftListView]) {
+        return NO;
+    }
+    return YES;
+}
+
 
 #pragma mark - UI Refresh
 /**
@@ -917,7 +963,7 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
 
 - (void)chatroomButtonTouched{
     self.chatroomView.hidden = NO;
-    self.logOrDownload = 3;e
+    self.logOrDownload = 3;
     self.logView.hidden = YES;
     self.listView.hidden = YES;
     self.downloadContainView.hidden = true;
@@ -1010,6 +1056,12 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
 //横屏下下载列表空白区域点击
 - (void)tapDownloadSpace{
     [self dismissDownloadTableViewWhenFullScreen];
+}
+
+- (void)resetBottomGesture:(UIGestureRecognizer *)gestureRecognizer {
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        [self.chatListView setDefaultBottomViewStatus];
+    }
 }
 
 #pragma mark - UIAlertViewDelegate

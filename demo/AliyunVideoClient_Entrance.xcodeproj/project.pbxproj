@@ -52,6 +52,36 @@
 		9E36B0C1241B6B5A00BFBC3C /* alivcffmpeg.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E36B0B0241B6B3500BFBC3C /* alivcffmpeg.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9E36B0C2241B6B5E00BFBC3C /* artpSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E36B0AF241B6B3500BFBC3C /* artpSource.framework */; };
 		9E36B0C3241B6B5E00BFBC3C /* artpSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E36B0AF241B6B3500BFBC3C /* artpSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A24139882499F63100E46BF6 /* RCCRInputBarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A24139462499F63100E46BF6 /* RCCRInputBarControl.m */; };
+		A24139892499F63100E46BF6 /* RCCRInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = A24139482499F63100E46BF6 /* RCCRInputView.m */; };
+		A241398A2499F63100E46BF6 /* RCCREmojiCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A241394A2499F63100E46BF6 /* RCCREmojiCollectionCell.m */; };
+		A241398B2499F63100E46BF6 /* RCCREmojiBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = A241394E2499F63100E46BF6 /* RCCREmojiBoardView.m */; };
+		A241398C2499F63100E46BF6 /* RCChatRoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A241394F2499F63100E46BF6 /* RCChatRoomView.m */; };
+		A241398D2499F63100E46BF6 /* RCChatroomBarrage.m in Sources */ = {isa = PBXBuildFile; fileRef = A24139532499F63100E46BF6 /* RCChatroomBarrage.m */; };
+		A241398E2499F63100E46BF6 /* RCChatroomGift.m in Sources */ = {isa = PBXBuildFile; fileRef = A24139552499F63100E46BF6 /* RCChatroomGift.m */; };
+		A241398F2499F63100E46BF6 /* RCChatroomWelcome.m in Sources */ = {isa = PBXBuildFile; fileRef = A24139562499F63100E46BF6 /* RCChatroomWelcome.m */; };
+		A24139902499F63100E46BF6 /* RCChatroomEnd.m in Sources */ = {isa = PBXBuildFile; fileRef = A24139582499F63100E46BF6 /* RCChatroomEnd.m */; };
+		A24139912499F63100E46BF6 /* RCChatroomLike.m in Sources */ = {isa = PBXBuildFile; fileRef = A24139592499F63100E46BF6 /* RCChatroomLike.m */; };
+		A24139922499F63100E46BF6 /* RCCRTextMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A241395B2499F63100E46BF6 /* RCCRTextMessageCell.m */; };
+		A24139932499F63100E46BF6 /* RCCRMessageBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A241395C2499F63100E46BF6 /* RCCRMessageBaseCell.m */; };
+		A24139942499F63100E46BF6 /* RCChatroomStart.m in Sources */ = {isa = PBXBuildFile; fileRef = A241395F2499F63100E46BF6 /* RCChatroomStart.m */; };
+		A24139952499F63100E46BF6 /* RCChatroomNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = A24139612499F63100E46BF6 /* RCChatroomNotification.m */; };
+		A24139962499F63100E46BF6 /* RCChatroomUserQuit.m in Sources */ = {isa = PBXBuildFile; fileRef = A24139652499F63100E46BF6 /* RCChatroomUserQuit.m */; };
+		A24139972499F63100E46BF6 /* RCDDanmakuManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A24139682499F63100E46BF6 /* RCDDanmakuManager.m */; };
+		A24139982499F63100E46BF6 /* RCDDanmakuInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A241396C2499F63100E46BF6 /* RCDDanmakuInfo.m */; };
+		A24139992499F63100E46BF6 /* RCDDanmaku.m in Sources */ = {isa = PBXBuildFile; fileRef = A241396D2499F63100E46BF6 /* RCDDanmaku.m */; };
+		A241399A2499F63100E46BF6 /* UIView+RCDDanmaku.m in Sources */ = {isa = PBXBuildFile; fileRef = A241396E2499F63100E46BF6 /* UIView+RCDDanmaku.m */; };
+		A241399B2499F63100E46BF6 /* RCCRUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A24139722499F63100E46BF6 /* RCCRUtilities.m */; };
+		A241399C2499F63100E46BF6 /* RCCRRongCloudIMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A24139742499F63100E46BF6 /* RCCRRongCloudIMManager.m */; };
+		A241399D2499F63100E46BF6 /* RCCRLiveHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A24139752499F63100E46BF6 /* RCCRLiveHttpManager.m */; };
+		A241399E2499F63100E46BF6 /* RCCRMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A241397C2499F63100E46BF6 /* RCCRMessageModel.m */; };
+		A241399F2499F63100E46BF6 /* RCCRLiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A241397D2499F63100E46BF6 /* RCCRLiveModel.m */; };
+		A24139A02499F63100E46BF6 /* RCCRAudienceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A241397E2499F63100E46BF6 /* RCCRAudienceModel.m */; };
+		A24139A12499F63100E46BF6 /* RCCRGiftModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A241397F2499F63100E46BF6 /* RCCRGiftModel.m */; };
+		A24139A22499F63100E46BF6 /* RCCRGiftCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A24139822499F63100E46BF6 /* RCCRGiftCollectionViewCell.m */; };
+		A24139A32499F63100E46BF6 /* RCCRGiftNumberLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A24139832499F63100E46BF6 /* RCCRGiftNumberLabel.m */; };
+		A24139A42499F63100E46BF6 /* RCCRGiftListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A24139862499F63100E46BF6 /* RCCRGiftListView.m */; };
+		A24139A6249A0B2C00E46BF6 /* Emoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = A24139A5249A0B2C00E46BF6 /* Emoji.plist */; };
 		D2437551213FCD5F001CBBDE /* NSArray+AliyunDeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2437550213FCD5F001CBBDE /* NSArray+AliyunDeepCopy.m */; };
 		D269B011216E017200C55896 /* UIButton+AliyunBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D269B010216E017200C55896 /* UIButton+AliyunBlock.m */; };
 		D269DC6421778D1200C55896 /* AlivcProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = D269DC6221778D1200C55896 /* AlivcProfile.m */; };
@@ -726,6 +756,65 @@
 		9E36B0B2241B6B3500BFBC3C /* AliyunMediaDownloader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AliyunMediaDownloader.framework; path = ../../../../sdk/ARM_SIMULATOR/AliyunMediaDownloader.framework; sourceTree = "<group>"; };
 		9E36B0B3241B6B3600BFBC3C /* AliyunPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AliyunPlayer.framework; path = ../../../../sdk/ARM_SIMULATOR/AliyunPlayer.framework; sourceTree = "<group>"; };
 		A06ABC99F66ED668F75BAD14 /* Pods-AliyunVideoClient_EntranceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliyunVideoClient_EntranceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AliyunVideoClient_EntranceTests/Pods-AliyunVideoClient_EntranceTests.release.xcconfig"; sourceTree = "<group>"; };
+		A24139462499F63100E46BF6 /* RCCRInputBarControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRInputBarControl.m; sourceTree = "<group>"; };
+		A24139472499F63100E46BF6 /* RCCREmojiBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCREmojiBoardView.h; sourceTree = "<group>"; };
+		A24139482499F63100E46BF6 /* RCCRInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRInputView.m; sourceTree = "<group>"; };
+		A241394A2499F63100E46BF6 /* RCCREmojiCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCREmojiCollectionCell.m; sourceTree = "<group>"; };
+		A241394B2499F63100E46BF6 /* RCCREmojiCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCREmojiCollectionCell.h; sourceTree = "<group>"; };
+		A241394C2499F63100E46BF6 /* RCCRInputBarControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRInputBarControl.h; sourceTree = "<group>"; };
+		A241394D2499F63100E46BF6 /* RCCRInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRInputView.h; sourceTree = "<group>"; };
+		A241394E2499F63100E46BF6 /* RCCREmojiBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCREmojiBoardView.m; sourceTree = "<group>"; };
+		A241394F2499F63100E46BF6 /* RCChatRoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCChatRoomView.m; sourceTree = "<group>"; };
+		A24139512499F63100E46BF6 /* RCChatroomNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatroomNotification.h; sourceTree = "<group>"; };
+		A24139522499F63100E46BF6 /* RCChatroomStart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatroomStart.h; sourceTree = "<group>"; };
+		A24139532499F63100E46BF6 /* RCChatroomBarrage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCChatroomBarrage.m; sourceTree = "<group>"; };
+		A24139542499F63100E46BF6 /* RCChatroomLike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatroomLike.h; sourceTree = "<group>"; };
+		A24139552499F63100E46BF6 /* RCChatroomGift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCChatroomGift.m; sourceTree = "<group>"; };
+		A24139562499F63100E46BF6 /* RCChatroomWelcome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCChatroomWelcome.m; sourceTree = "<group>"; };
+		A24139572499F63100E46BF6 /* RCChatroomUserQuit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatroomUserQuit.h; sourceTree = "<group>"; };
+		A24139582499F63100E46BF6 /* RCChatroomEnd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCChatroomEnd.m; sourceTree = "<group>"; };
+		A24139592499F63100E46BF6 /* RCChatroomLike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCChatroomLike.m; sourceTree = "<group>"; };
+		A241395B2499F63100E46BF6 /* RCCRTextMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRTextMessageCell.m; sourceTree = "<group>"; };
+		A241395C2499F63100E46BF6 /* RCCRMessageBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRMessageBaseCell.m; sourceTree = "<group>"; };
+		A241395D2499F63100E46BF6 /* RCCRTextMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRTextMessageCell.h; sourceTree = "<group>"; };
+		A241395E2499F63100E46BF6 /* RCCRMessageBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRMessageBaseCell.h; sourceTree = "<group>"; };
+		A241395F2499F63100E46BF6 /* RCChatroomStart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCChatroomStart.m; sourceTree = "<group>"; };
+		A24139602499F63100E46BF6 /* RCChatroomBarrage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatroomBarrage.h; sourceTree = "<group>"; };
+		A24139612499F63100E46BF6 /* RCChatroomNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCChatroomNotification.m; sourceTree = "<group>"; };
+		A24139622499F63100E46BF6 /* RCChatroomEnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatroomEnd.h; sourceTree = "<group>"; };
+		A24139632499F63100E46BF6 /* RCChatroomGift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatroomGift.h; sourceTree = "<group>"; };
+		A24139642499F63100E46BF6 /* RCChatroomWelcome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatroomWelcome.h; sourceTree = "<group>"; };
+		A24139652499F63100E46BF6 /* RCChatroomUserQuit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCChatroomUserQuit.m; sourceTree = "<group>"; };
+		A24139672499F63100E46BF6 /* RCDDanmakuInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDDanmakuInfo.h; sourceTree = "<group>"; };
+		A24139682499F63100E46BF6 /* RCDDanmakuManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDDanmakuManager.m; sourceTree = "<group>"; };
+		A24139692499F63100E46BF6 /* RCDDanmaku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDDanmaku.h; sourceTree = "<group>"; };
+		A241396A2499F63100E46BF6 /* UIView+RCDDanmaku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RCDDanmaku.h"; sourceTree = "<group>"; };
+		A241396B2499F63100E46BF6 /* RCDDanmakuManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDDanmakuManager.h; sourceTree = "<group>"; };
+		A241396C2499F63100E46BF6 /* RCDDanmakuInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDDanmakuInfo.m; sourceTree = "<group>"; };
+		A241396D2499F63100E46BF6 /* RCDDanmaku.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDDanmaku.m; sourceTree = "<group>"; };
+		A241396E2499F63100E46BF6 /* UIView+RCDDanmaku.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RCDDanmaku.m"; sourceTree = "<group>"; };
+		A241396F2499F63100E46BF6 /* RCChatRoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatRoomView.h; sourceTree = "<group>"; };
+		A24139712499F63100E46BF6 /* RCCRUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRUtilities.h; sourceTree = "<group>"; };
+		A24139722499F63100E46BF6 /* RCCRUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRUtilities.m; sourceTree = "<group>"; };
+		A24139742499F63100E46BF6 /* RCCRRongCloudIMManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRRongCloudIMManager.m; sourceTree = "<group>"; };
+		A24139752499F63100E46BF6 /* RCCRLiveHttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRLiveHttpManager.m; sourceTree = "<group>"; };
+		A24139762499F63100E46BF6 /* RCCRRongCloudIMManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRRongCloudIMManager.h; sourceTree = "<group>"; };
+		A24139772499F63100E46BF6 /* RCCRLiveHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRLiveHttpManager.h; sourceTree = "<group>"; };
+		A24139792499F63100E46BF6 /* RCCRLiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRLiveModel.h; sourceTree = "<group>"; };
+		A241397A2499F63100E46BF6 /* RCCRGiftModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRGiftModel.h; sourceTree = "<group>"; };
+		A241397B2499F63100E46BF6 /* RCCRAudienceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRAudienceModel.h; sourceTree = "<group>"; };
+		A241397C2499F63100E46BF6 /* RCCRMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRMessageModel.m; sourceTree = "<group>"; };
+		A241397D2499F63100E46BF6 /* RCCRLiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRLiveModel.m; sourceTree = "<group>"; };
+		A241397E2499F63100E46BF6 /* RCCRAudienceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRAudienceModel.m; sourceTree = "<group>"; };
+		A241397F2499F63100E46BF6 /* RCCRGiftModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRGiftModel.m; sourceTree = "<group>"; };
+		A24139802499F63100E46BF6 /* RCCRMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRMessageModel.h; sourceTree = "<group>"; };
+		A24139822499F63100E46BF6 /* RCCRGiftCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRGiftCollectionViewCell.m; sourceTree = "<group>"; };
+		A24139832499F63100E46BF6 /* RCCRGiftNumberLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRGiftNumberLabel.m; sourceTree = "<group>"; };
+		A24139842499F63100E46BF6 /* RCCRGiftListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRGiftListView.h; sourceTree = "<group>"; };
+		A24139852499F63100E46BF6 /* RCCRGiftCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRGiftCollectionViewCell.h; sourceTree = "<group>"; };
+		A24139862499F63100E46BF6 /* RCCRGiftListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRGiftListView.m; sourceTree = "<group>"; };
+		A24139872499F63100E46BF6 /* RCCRGiftNumberLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRGiftNumberLabel.h; sourceTree = "<group>"; };
+		A24139A5249A0B2C00E46BF6 /* Emoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Emoji.plist; sourceTree = "<group>"; };
 		A8DD4B3D2C4494E381E37BD2 /* Pods-AliyunVideoClient_EntranceUITests.alivcvideoupload.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliyunVideoClient_EntranceUITests.alivcvideoupload.xcconfig"; path = "Pods/Target Support Files/Pods-AliyunVideoClient_EntranceUITests/Pods-AliyunVideoClient_EntranceUITests.alivcvideoupload.xcconfig"; sourceTree = "<group>"; };
 		AF15E898CAFD50BE309C7426 /* Pods-AliyunVideoClient_Entrance.alivcshortvideo_standard.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliyunVideoClient_Entrance.alivcshortvideo_standard.xcconfig"; path = "Pods/Target Support Files/Pods-AliyunVideoClient_Entrance/Pods-AliyunVideoClient_Entrance.alivcshortvideo_standard.xcconfig"; sourceTree = "<group>"; };
 		BE973F34199E72486EE03DD0 /* Pods-AliyunVideoClient_EntranceTests.alivclivepush.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliyunVideoClient_EntranceTests.alivclivepush.xcconfig"; path = "Pods/Target Support Files/Pods-AliyunVideoClient_EntranceTests/Pods-AliyunVideoClient_EntranceTests.alivclivepush.xcconfig"; sourceTree = "<group>"; };
@@ -1061,6 +1150,143 @@
 				7728860980246AD4894FC6DA /* Pods-AliyunVideoClient_Entrance.alivcvideoupload.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A24139442499F63100E46BF6 /* chatRoom */ = {
+			isa = PBXGroup;
+			children = (
+				A241396F2499F63100E46BF6 /* RCChatRoomView.h */,
+				A241394F2499F63100E46BF6 /* RCChatRoomView.m */,
+				A24139662499F63100E46BF6 /* Danmaku */,
+				A24139452499F63100E46BF6 /* InputBar */,
+				A24139732499F63100E46BF6 /* Manager */,
+				A24139502499F63100E46BF6 /* Message */,
+				A24139782499F63100E46BF6 /* Model */,
+				A24139702499F63100E46BF6 /* Utilities */,
+				A24139812499F63100E46BF6 /* View */,
+			);
+			path = chatRoom;
+			sourceTree = "<group>";
+		};
+		A24139452499F63100E46BF6 /* InputBar */ = {
+			isa = PBXGroup;
+			children = (
+				A24139492499F63100E46BF6 /* Cell */,
+				A24139472499F63100E46BF6 /* RCCREmojiBoardView.h */,
+				A241394E2499F63100E46BF6 /* RCCREmojiBoardView.m */,
+				A241394C2499F63100E46BF6 /* RCCRInputBarControl.h */,
+				A24139462499F63100E46BF6 /* RCCRInputBarControl.m */,
+				A241394D2499F63100E46BF6 /* RCCRInputView.h */,
+				A24139482499F63100E46BF6 /* RCCRInputView.m */,
+			);
+			path = InputBar;
+			sourceTree = "<group>";
+		};
+		A24139492499F63100E46BF6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A241394A2499F63100E46BF6 /* RCCREmojiCollectionCell.m */,
+				A241394B2499F63100E46BF6 /* RCCREmojiCollectionCell.h */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A24139502499F63100E46BF6 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				A241395A2499F63100E46BF6 /* Cell */,
+				A24139602499F63100E46BF6 /* RCChatroomBarrage.h */,
+				A24139532499F63100E46BF6 /* RCChatroomBarrage.m */,
+				A24139622499F63100E46BF6 /* RCChatroomEnd.h */,
+				A24139582499F63100E46BF6 /* RCChatroomEnd.m */,
+				A24139632499F63100E46BF6 /* RCChatroomGift.h */,
+				A24139552499F63100E46BF6 /* RCChatroomGift.m */,
+				A24139542499F63100E46BF6 /* RCChatroomLike.h */,
+				A24139592499F63100E46BF6 /* RCChatroomLike.m */,
+				A24139512499F63100E46BF6 /* RCChatroomNotification.h */,
+				A24139612499F63100E46BF6 /* RCChatroomNotification.m */,
+				A24139522499F63100E46BF6 /* RCChatroomStart.h */,
+				A241395F2499F63100E46BF6 /* RCChatroomStart.m */,
+				A24139572499F63100E46BF6 /* RCChatroomUserQuit.h */,
+				A24139652499F63100E46BF6 /* RCChatroomUserQuit.m */,
+				A24139642499F63100E46BF6 /* RCChatroomWelcome.h */,
+				A24139562499F63100E46BF6 /* RCChatroomWelcome.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		A241395A2499F63100E46BF6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A241395E2499F63100E46BF6 /* RCCRMessageBaseCell.h */,
+				A241395C2499F63100E46BF6 /* RCCRMessageBaseCell.m */,
+				A241395D2499F63100E46BF6 /* RCCRTextMessageCell.h */,
+				A241395B2499F63100E46BF6 /* RCCRTextMessageCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A24139662499F63100E46BF6 /* Danmaku */ = {
+			isa = PBXGroup;
+			children = (
+				A24139692499F63100E46BF6 /* RCDDanmaku.h */,
+				A241396D2499F63100E46BF6 /* RCDDanmaku.m */,
+				A24139672499F63100E46BF6 /* RCDDanmakuInfo.h */,
+				A241396C2499F63100E46BF6 /* RCDDanmakuInfo.m */,
+				A241396B2499F63100E46BF6 /* RCDDanmakuManager.h */,
+				A24139682499F63100E46BF6 /* RCDDanmakuManager.m */,
+				A241396A2499F63100E46BF6 /* UIView+RCDDanmaku.h */,
+				A241396E2499F63100E46BF6 /* UIView+RCDDanmaku.m */,
+			);
+			path = Danmaku;
+			sourceTree = "<group>";
+		};
+		A24139702499F63100E46BF6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A24139712499F63100E46BF6 /* RCCRUtilities.h */,
+				A24139722499F63100E46BF6 /* RCCRUtilities.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A24139732499F63100E46BF6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A24139772499F63100E46BF6 /* RCCRLiveHttpManager.h */,
+				A24139752499F63100E46BF6 /* RCCRLiveHttpManager.m */,
+				A24139762499F63100E46BF6 /* RCCRRongCloudIMManager.h */,
+				A24139742499F63100E46BF6 /* RCCRRongCloudIMManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A24139782499F63100E46BF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A241397B2499F63100E46BF6 /* RCCRAudienceModel.h */,
+				A241397E2499F63100E46BF6 /* RCCRAudienceModel.m */,
+				A241397A2499F63100E46BF6 /* RCCRGiftModel.h */,
+				A241397F2499F63100E46BF6 /* RCCRGiftModel.m */,
+				A24139792499F63100E46BF6 /* RCCRLiveModel.h */,
+				A241397D2499F63100E46BF6 /* RCCRLiveModel.m */,
+				A24139802499F63100E46BF6 /* RCCRMessageModel.h */,
+				A241397C2499F63100E46BF6 /* RCCRMessageModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A24139812499F63100E46BF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A24139852499F63100E46BF6 /* RCCRGiftCollectionViewCell.h */,
+				A24139822499F63100E46BF6 /* RCCRGiftCollectionViewCell.m */,
+				A24139842499F63100E46BF6 /* RCCRGiftListView.h */,
+				A24139862499F63100E46BF6 /* RCCRGiftListView.m */,
+				A24139872499F63100E46BF6 /* RCCRGiftNumberLabel.h */,
+				A24139832499F63100E46BF6 /* RCCRGiftNumberLabel.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F31ED8F721E74C2200D04840 /* AlivcLive */ = {
@@ -1481,10 +1707,12 @@
 		F3B56FD3206386AE0075DEAA /* AliyunVideoClient_Entrance */ = {
 			isa = PBXGroup;
 			children = (
+				A24139442499F63100E46BF6 /* chatRoom */,
 				F32447372285498C003BCE8A /* AlivcVideoPlay */,
 				F393DE94207C651600661D3D /* AlivcAbstraction */,
 				F3C17E2E2091D3B300635F84 /* AlivcFramework */,
 				F3B56FDD206386AE0075DEAA /* Assets.xcassets */,
+				A24139A5249A0B2C00E46BF6 /* Emoji.plist */,
 				F3B570062063878C0075DEAA /* AppSupportFiles */,
 				F3B570082063878C0075DEAA /* Categories */,
 				F3B570162063878C0075DEAA /* Config */,
@@ -1885,6 +2113,7 @@
 				F3B5701F2063878D0075DEAA /* readMe_Categories.txt in Resources */,
 				F3B570222063878D0075DEAA /* readMe_Resources.txt in Resources */,
 				F3B570202063878D0075DEAA /* readMe_Home.txt in Resources */,
+				A24139A6249A0B2C00E46BF6 /* Emoji.plist in Resources */,
 				F32448322285498C003BCE8A /* AliyunImageSource.bundle in Resources */,
 				F3B56FE1206386AE0075DEAA /* LaunchScreen.storyboard in Resources */,
 				F32447E22285498C003BCE8A /* AVCVideoDownloadTCell.xib in Resources */,
@@ -1925,16 +2154,18 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AliyunVideoClient_Entrance/Pods-AliyunVideoClient_Entrance-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-AliyunVideoClient_Entrance/Pods-AliyunVideoClient_Entrance-resources.sh",
 				"${PODS_ROOT}/LBXScan/LBXScan/UI/CodeScan.bundle",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/RCConfig.plist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CodeScan.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RCConfig.plist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AliyunVideoClient_Entrance/Pods-AliyunVideoClient_Entrance-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AliyunVideoClient_Entrance/Pods-AliyunVideoClient_Entrance-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B4C3A909B9D41AA57AF54ACD /* [CP] Check Pods Manifest.lock */ = {
@@ -2308,11 +2539,15 @@
 				F32448042285498C003BCE8A /* AliyunPlayerViewSeekPopupView.m in Sources */,
 				F32447D62285498C003BCE8A /* AVCSelectSharpnessView.m in Sources */,
 				F32447FE2285498C003BCE8A /* AliyunPlayerViewErrorView.m in Sources */,
+				A241399F2499F63100E46BF6 /* RCCRLiveModel.m in Sources */,
+				A241398E2499F63100E46BF6 /* RCChatroomGift.m in Sources */,
 				F324481C2285498C003BCE8A /* AliyunPlayerViewFirstStartGuideView.m in Sources */,
 				F33499FA20CFE61A001D99B6 /* AlivcLocalDatabaseManager.m in Sources */,
 				F3B56FE4206386AE0075DEAA /* main.m in Sources */,
+				A24139882499F63100E46BF6 /* RCCRInputBarControl.m in Sources */,
 				F32448422285498C003BCE8A /* AVCVideoConfig.m in Sources */,
 				83EB6E6F20D7306A00219AC0 /* AlivcStringDrawing.m in Sources */,
+				A24139912499F63100E46BF6 /* RCChatroomLike.m in Sources */,
 				D269B011216E017200C55896 /* UIButton+AliyunBlock.m in Sources */,
 				F32447DA2285498C003BCE8A /* AVCLogView.m in Sources */,
 				F32448002285498C003BCE8A /* AliyunPlayerViewTopView.m in Sources */,
@@ -2323,6 +2558,7 @@
 				83EB6E5620D72F4E00219AC0 /* AlivcLiveBeautifySettingsViewController.m in Sources */,
 				F31ED8FD21E74C2200D04840 /* AlivcLiveUser.m in Sources */,
 				8324CBD120BFCBD00088D167 /* AlivcBaseNavigationController+aliyun_autorotate.m in Sources */,
+				A241399C2499F63100E46BF6 /* RCCRRongCloudIMManager.m in Sources */,
 				F3A3306820DB8C3500A21014 /* AlivcPushBeautyParams.m in Sources */,
 				F32448082285498C003BCE8A /* AliyunGestureModel.m in Sources */,
 				F393DE86207B411500661D3D /* UIApplication+AlivcHelper.m in Sources */,
@@ -2332,6 +2568,9 @@
 				F393DE89207B441C00661D3D /* AlivcKeyboardManageViewController.m in Sources */,
 				F32448182285498C003BCE8A /* AliyunSpeedButton.m in Sources */,
 				F393DE8C207B4BB600661D3D /* UIResponder+AlivcHelper.m in Sources */,
+				A241398A2499F63100E46BF6 /* RCCREmojiCollectionCell.m in Sources */,
+				A24139A32499F63100E46BF6 /* RCCRGiftNumberLabel.m in Sources */,
+				A24139A42499F63100E46BF6 /* RCCRGiftListView.m in Sources */,
 				F3349AC220D126F8001D99B6 /* AlivcVideoPlayListModel.m in Sources */,
 				F3A1D50920DA5C0D00FEF3C4 /* AlivcLiveBeautifySettingsView.m in Sources */,
 				F324483E2285498C003BCE8A /* AVCVideo.m in Sources */,
@@ -2339,22 +2578,37 @@
 				D269DC6421778D1200C55896 /* AlivcProfile.m in Sources */,
 				F3349ACD20D126F8001D99B6 /* AliyunReachability.m in Sources */,
 				F32448102285498C003BCE8A /* AliyunPlayerViewSlider.m in Sources */,
+				A241399D2499F63100E46BF6 /* RCCRLiveHttpManager.m in Sources */,
+				A241398D2499F63100E46BF6 /* RCChatroomBarrage.m in Sources */,
+				A24139932499F63100E46BF6 /* RCCRMessageBaseCell.m in Sources */,
 				F3909D522084A8780032740C /* AlivcAppServer.m in Sources */,
 				F37CCA8821EE68D300AAD603 /* AlivcQuUserManager.m in Sources */,
+				A241398B2499F63100E46BF6 /* RCCREmojiBoardView.m in Sources */,
 				F3B56FD6206386AE0075DEAA /* AppDelegate.m in Sources */,
 				F32447E82285498C003BCE8A /* AliyunDataSource.m in Sources */,
+				A241398F2499F63100E46BF6 /* RCChatroomWelcome.m in Sources */,
 				F324480E2285498C003BCE8A /* AliyunPlayerViewQualityListView.m in Sources */,
+				A24139962499F63100E46BF6 /* RCChatroomUserQuit.m in Sources */,
 				83EB6E6720D72FD000219AC0 /* AlivcStringConvertTool.m in Sources */,
 				F3BBE3EE207A1EE100E8E9C0 /* UIColor+AlivcHelper.m in Sources */,
 				F32447EC2285498C003BCE8A /* AliyunLog.m in Sources */,
+				A24139972499F63100E46BF6 /* RCDDanmakuManager.m in Sources */,
 				F32447FC2285498C003BCE8A /* AliyunPlayerViewPopLayer.m in Sources */,
 				F393DFD3207F2F0100661D3D /* MBProgressHUD+AlivcHelper.m in Sources */,
+				A24139A02499F63100E46BF6 /* RCCRAudienceModel.m in Sources */,
 				F3A1D56E20DA5D5F00FEF3C4 /* AlivcDefine.m in Sources */,
+				A24139922499F63100E46BF6 /* RCCRTextMessageCell.m in Sources */,
 				F32448022285498C003BCE8A /* AliyunPlayerViewControlView.m in Sources */,
+				A24139A12499F63100E46BF6 /* RCCRGiftModel.m in Sources */,
+				A24139992499F63100E46BF6 /* RCDDanmaku.m in Sources */,
 				F32447EA2285498C003BCE8A /* AliyunUtil.m in Sources */,
+				A241399E2499F63100E46BF6 /* RCCRMessageModel.m in Sources */,
+				A241398C2499F63100E46BF6 /* RCChatRoomView.m in Sources */,
 				F3A1D50C20DA5C0D00FEF3C4 /* _AlivcLiveBeautifyLevelView.m in Sources */,
 				F31ED8FC21E74C2200D04840 /* AlivcUserInfoManager.m in Sources */,
 				F39B489021007C3C00F1DEC4 /* UIView+AlivcHelper.m in Sources */,
+				A24139902499F63100E46BF6 /* RCChatroomEnd.m in Sources */,
+				A241399A2499F63100E46BF6 /* UIView+RCDDanmaku.m in Sources */,
 				F324480C2285498C003BCE8A /* AliyunPlayerViewBottomView.m in Sources */,
 				F3B5703220638D870075DEAA /* AVC_ET_ModuleDefine.m in Sources */,
 				F3A1D50D20DA5C0D00FEF3C4 /* _AlivcLiveBeautifyNavigationView.m in Sources */,
@@ -2372,6 +2626,7 @@
 				F32448142285498C003BCE8A /* AliyunPlayerViewGifView.m in Sources */,
 				F3AFB1BD216DECE300F5683A /* AlivcImage.m in Sources */,
 				D2437551213FCD5F001CBBDE /* NSArray+AliyunDeepCopy.m in Sources */,
+				A24139892499F63100E46BF6 /* RCCRInputView.m in Sources */,
 				F324480A2285498C003BCE8A /* AliyunPlayerViewProgressView.m in Sources */,
 				F32447E02285498C003BCE8A /* AlivcPlayListsView.m in Sources */,
 				F32448062285498C003BCE8A /* AliyunPlayerViewGestureView.m in Sources */,
@@ -2379,15 +2634,20 @@
 				F3B5702F20638A4F0075DEAA /* AlivcHomeViewController.m in Sources */,
 				18D6577122E9AFD000FF5816 /* AlivcVideoPlayThumbnailView.m in Sources */,
 				F3349AB320D126F8001D99B6 /* AlivcScanViewController.m in Sources */,
+				A24139942499F63100E46BF6 /* RCChatroomStart.m in Sources */,
 				F32447D02285498C003BCE8A /* AlivcVideoPlayerListsTableViewCell.m in Sources */,
 				01BC18692187F2530051C424 /* AlivcLiveEnvManager.m in Sources */,
 				83EB6E6920D72FD000219AC0 /* AlivcLiveUserCountTool.m in Sources */,
+				A24139A22499F63100E46BF6 /* RCCRGiftCollectionViewCell.m in Sources */,
 				F32448262285498C003BCE8A /* AVC_VP_PlaySettingVC.m in Sources */,
 				F324483A2285498C003BCE8A /* AlivcVideoDataBase.m in Sources */,
 				F324481A2285498C003BCE8A /* AliyunPlayerViewSpeedView.m in Sources */,
 				F32447D22285498C003BCE8A /* AVCSlider.m in Sources */,
+				A24139952499F63100E46BF6 /* RCChatroomNotification.m in Sources */,
 				F393DE83207B3F9900661D3D /* AlivcKeyboardManager.m in Sources */,
 				F32448202285498C003BCE8A /* AVC_VP_BaseViewController.m in Sources */,
+				A24139982499F63100E46BF6 /* RCDDanmakuInfo.m in Sources */,
+				A241399B2499F63100E46BF6 /* RCCRUtilities.m in Sources */,
 				F3349ABE20D126F8001D99B6 /* AlivcVideoPlayManager.m in Sources */,
 				F3A1D50B20DA5C0D00FEF3C4 /* _AlivcLiveBeautifySliderView.m in Sources */,
 			);

@@ -33,6 +33,8 @@
 
 //user
 #import "AliVideoClientUser.h"
+#import "RCCRRongCloudIMManager.h"
+#include <stdlib.h>
 
 #if __has_include(<AliyunVideoSDKPro/AliyunVideoSDKInfo.h>)
 #import <AliyunVideoSDKPro/AliyunVideoSDKInfo.h>
@@ -383,14 +385,42 @@ static CGFloat lableDevideToTop = 44; //阿里云视频label距离顶部的距�
 
 #pragma mark - Custom Method
 - (void)pushTargetVCWithClassString:(NSString *)classString{
-    Class viewControllerClass = NSClassFromString(classString);
-    if (viewControllerClass) {
-        UIViewController *targetVC = [[viewControllerClass alloc]init];
+    int i = arc4random() % 100;
+    
+    [[RCCRRongCloudIMManager sharedRCCRRongCloudIMManager] connectWithUserId:@"" userName:[NSString stringWithFormat:@"%d",i] portraitUri:nil success:^(NSString *userId) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            Class viewControllerClass = NSClassFromString(classString);
+            if (viewControllerClass) {
+                UIViewController *targetVC = [[viewControllerClass alloc]init];
+                
+                if (targetVC) {
+                    [self.navigationController pushViewController:targetVC animated:true];
+                }
+            }
+        });
         
-        if (targetVC) {
-            [self.navigationController pushViewController:targetVC animated:true];
+    } error:^(RCConnectErrorCode status) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self showAlertWithMessage:@"加入直播间链接IM失败" completion:nil];
+        });
+        
+    } tokenIncorrect:^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self showAlertWithMessage:@"加入直播间token无效" completion:nil];
+        });
+        
+    }];
+    
+}
+
+- (void)showAlertWithMessage:(NSString *)message completion:(void (^)(void))completion{
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"错误" message:message preferredStyle:UIAlertControllerStyleAlert];
+    [controller addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        if (completion) {
+            completion();
         }
-    }
+    }]];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 - (void)pushTargetVCWithClassString:(NSString *)classString value:(id)value valueString:(NSString *)valueString{
