@@ -738,7 +738,7 @@ static NSInteger alertViewTag_delete_video = 1004; //删除本地视频
 
 #pragma mark - Chatroom
 - (void)joinChatRoom {
-    [[RCIMClient sharedRCIMClient] joinChatRoom:@"aliroom" messageCount:-1 success:^{
+    [[RCIMClient sharedRCIMClient] joinChatRoom:@"aliyun_player_chat_room" messageCount:-1 success:^{
         RCChatroomWelcome *joinChatroomMessage = [[RCChatroomWelcome alloc]init];
                 [joinChatroomMessage setId:[RCCRRongCloudIMManager sharedRCCRRongCloudIMManager].currentUserInfo.userId];
                 [self.chatListView sendMessage:joinChatroomMessage pushContent:nil success:nil error:nil];
